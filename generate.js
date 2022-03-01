@@ -9,6 +9,8 @@ function main() {
 
   if (!continueConfirmation) return;
 
+  var offset = prompt("Where should generation numbering start? Default is", "1");
+
   var supply = prompt("How many images do you want to generate?", "10");
 
   var name = prompt("What is the name of your collection?", "");
@@ -36,7 +38,7 @@ function main() {
     return _str.split("#").shift();
   }
 
-  for (var h = 1; h < parseInt(supply) + 1; h++) {
+  for (var h = parseInt(offset); h < parseInt(supply) + parseInt(offset); h++) {
     var obj = {};
     obj.name = name + " #" + h;
     obj.description = description;
