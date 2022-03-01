@@ -36,7 +36,7 @@ function main() {
     return _str.split("#").shift();
   }
 
-  for (var h = 1; h < parseInt(supply) + 1; h++) {
+  for (var h = parseInt(offset) + 1; h < parseInt(supply) + parseInt(offset) + 1; h++) {
     var obj = {};
     obj.name = name + " #" + h;
     obj.description = description;
